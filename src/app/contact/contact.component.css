@@ -1,0 +1,228 @@
+.contactoverlay {
+	background-color: black;
+	position: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+}
+
+.contactimage {
+	width: 90px;
+	border-radius: 50%;
+	z-index: 10;
+	vertical-align: middle;
+	top: -46%;
+	left: 50%;
+	position: absolute;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.contactbody {
+	size: 20px;
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.icon-button {
+	background-color: white;
+	border-radius: 3.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.0rem;
+	height: 3.6rem;
+	line-height: 3.6rem;
+	margin: 0 50px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 3.6rem;
+}
+
+/* Circle */
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 3.6rem;
+	height: 3.6rem;
+	border-radius: 3.6rem;
+	margin: -1.8rem;
+}
+.twitter span {
+	background-color: #4099ff;
+}
+
+.linkedin span {
+	background-color: #0077b5;
+}
+.google span {
+	background-color: #0072c6;
+}
+.github span {
+	background-color: rgb(73, 72, 70);
+}
+
+/* Icons */
+.icon-button i {
+	background: none;
+	margin-right: 3px;
+	color: #3b5998;
+	height: 3.6rem;
+	left: 0;
+	line-height: 3.6rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 3.6rem;
+	z-index: 10;
+}
+
+.icon-button .fa-twitter {
+	color: #4099ff;
+}
+.icon-button .fa-linkedin-square {
+	color: #0077b5;
+}
+.icon-button .fa-github {
+	color: rgb(73, 72, 70);
+}
+.icon-button .fa-envelope {
+	color: #0072c6;
+}
+
+.icon-button:hover {
+	box-shadow: 0 0 15px slategrey;
+}
+
+.icon-button:hover .fa-twitter,
+.icon-button:hover .fa-linkedin-square,
+.icon-button:hover .fa-envelope,
+.icon-button:hover .fa-github {
+	color: white;
+}
+
+.social-media {
+	width: 1000px;
+	border-radius: 50%;
+	z-index: 10;
+	top: 67%;
+	left: 62%;
+	position: absolute;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.contacts {
+	width: 1000px;
+	z-index: 10;
+	vertical-align: middle;
+	top: 85%;
+	left: 55%;
+	position: absolute;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.icon-contact span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 0;
+}
+
+.icon-contact i {
+	background: none;
+	margin-right: 3px;
+	color: #3b5998;
+	height: 3.6rem;
+	left: 0;
+	line-height: 3.6rem;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 3.6rem;
+	z-index: 10;
+	top: 0;
+}
+
+.icon-contact .fa-mobile {
+	background-color: forestgreen;
+	color: white;
+	border-radius: 3.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.0rem;
+	height: 3.6rem;
+	line-height: 3.6rem;
+	margin: 0 4px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 3.6rem;
+}
+.icon-contact .fa-envelope {
+	background-color: #0072c6;
+	color: white;
+	border-radius: 3.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.0rem;
+	height: 3.6rem;
+	line-height: 3.6rem;
+	margin: 0 4px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 3.6rem;
+}

@@ -1,0 +1,16 @@
+h1,
+h2,
+h3 {
+	font-weight: 350;
+}
+
+u {
+	text-decoration: none;
+	border-bottom: 2px solid currentColor;
+}
+p {
+	text-align: justify;
+	margin-top: 1%;
+	text-indent: 10%;
+	font-weight: 490;
+}
