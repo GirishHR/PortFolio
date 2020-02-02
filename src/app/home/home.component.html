@@ -1,31 +1,36 @@
-<div id="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="v-header container1">
-                <div class="fullscreen-video-wrap">
-                    <!--  https://www.videvo.net/video/typing-on-computer-white-bg/4475/ -->
-                    <!-- DO NOT USE THIS VIDEO, I JUST NEEDED A HOSTED VIDEO FOR THIS CODEPEN> USE THE ONE ABOVE -->
-                    <video autoplay loop [muted]="'muted'">
-                        <source src="../../assets/videos/coding.mp4" type="video/mp4" />
-                    </video>
-                </div>
-                <div class="header-overlay"></div>
-                <div class="header-content text-md-center" style="margin-top: 85px;">
-                    <img src="../../assets/images/girish.jpg" alt="Avatar"
-                        style="width:250px;height:250px ;border-radius: 50%;">
-                    <h1 style="margin-top:5px;">Welcome Everyone</h1>
-                    <h3 style="margin-top:5px;">I'm Girish</h3>
-                    <div class="link-button">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="v-header">
+            <div class="fullscreen-video-wrap">
+                <video autoplay loop [muted]="'muted'">
+                    <source src="../../assets/videos/coding.mp4" type="video/mp4" />
+                </video>
+            </div>
 
-                        <a routerLinkActive="active" class="nav-link" routerLink="/portfolio">
-                            <span class="mr-2" style="font-style: italic;color: whitesmoke;">Here's
-                                more what I
-                                do</span>
-                            <i class="fa fa-angle-right fa-lg" aria-hidden="true"
-                                style="color:whitesmoke; margin-left:1px"></i>
+            <div class="header-overlay">
+
+                <div class="homebody">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="text-align: end;">
+                        <a href="../../assets/files/GIRISH_RESUME.pdf" download>
+                            <button type="button" class="btn btn-primary download">Download
+                                Resume</button>
                         </a>
                     </div>
-
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-5">
+                        <div class="header-content text-center">
+                            <img src="../../assets/images/girish.jpg" alt="Avatar"
+                                style="width:250px;height:250px ;border-radius: 50%;">
+                            <h1 style="margin-top:1%;">Welcome Everyone</h1>
+                            <h2 style="margin-top:1%;">I'm Girish</h2>
+                            <a routerLinkActive="active" class="nav-link" routerLink="/portfolio">
+                                <h5 class=" mt-5" style="color: whitesmoke;font-weight:400;padding:auto;">Here's
+                                    more what I
+                                    do
+                                    <i class="fa fa-angle-right fa-lg jump" aria-hidden="true"
+                                        style="color:whitesmoke; margin-left:1%"></i></h5>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

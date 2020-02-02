@@ -1,7 +1,11 @@
 h1,
 h2,
-h3 {
-	font-weight: 350;
+h3,
+h4 {
+	font-weight: 700;
+	font-family: serif;
+	font-style: oblique;
+	font-variant: small-caps;
 }
 
 u {
@@ -13,4 +17,79 @@ p {
 	margin-top: 1%;
 	text-indent: 10%;
 	font-weight: 490;
+	font-size: 1.2rem;
+}
+h3,
+h4 {
+	margin-top: 5%;
+}
+.charts {
+	border-bottom: 2px solid black;
+	font-family: 'Source Sans Pro', sans-serif;
+	display: inline-block;
+	line-height: 0.85;
+	text-shadow: 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white;
+	margin-left: auto;
+}
+.list-type1 {
+	width: fit-content;
+}
+
+.list-type1 ol {
+	counter-reset: li;
+	list-style: none;
+	*list-style: decimal;
+	font-size: 15px;
+	padding: 0;
+	margin-bottom: 4em;
+	font-weight: 549;
+	font-size: 27px;
+	font-family: serif;
+	font-style: oblique;
+	font-variant: small-caps;
+}
+.list-type1 ol ol {
+	margin: 0 0 0 2em;
+}
+
+.list-type1 a {
+	position: relative;
+	display: block;
+	padding: 1.1em 1.1em 1.1em 2em;
+	*padding: .4em;
+	margin: 1.5em 0;
+	background: #4099ff;
+	background-image: radial-gradient(#d2dae2, #0072c6);
+	color: #000;
+	text-decoration: none;
+	-moz-border-radius: .3em;
+	-webkit-border-radius: .3em;
+	border-radius: 10em;
+	transition: all .2s ease-in-out;
+}
+
+.list-type1 a:hover {
+	background: rgba(183, 190, 190, 0.918);
+	text-decoration: none;
+	transform: scale(1.1);
+}
+
+.list-type1 a:before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	left: -1.3em;
+	top: 50%;
+	margin-top: -1.3em;
+	background: #0072c6;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	border: .3em solid #fff;
+	text-align: center;
+	font-weight: bold;
+	-moz-border-radius: 2em;
+	-webkit-border-radius: 2em;
+	border-radius: 2em;
+	color: #fff;
 }
