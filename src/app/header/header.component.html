@@ -23,14 +23,15 @@
     style="background-color: #08344d;"
     [ngStyle]="router.url === '/home'? {'background-color': 'transparent'{'background-color':'#08344d'}"
 </nav> -->
-<nav class="navbar navbar-expand-sm  navbar-dark sticky-top " style="opacity: 0.95;"
+<nav class="navbar navbar-expand-sm  navbar-dark sticky-top " style="opacity: 0.8;"
     [ngStyle]="router.url === '/home' || router.url === '/contact' ? {'background-color': 'transparent'}:{'background-color':'black'}"
     id="main-nav">
     <div class="container">
         <a routerLink="/home" class="navbar-brand">
+            <div class="offset-7 col-xs-2 col-sm-2 col-md-2 col-lg-2"><i class="fa fa-podcast" aria-hidden="true" style="color:whitesmoke;"></i>
+            GIRISH</div>
             <!-- <img src="../../assets/images/logo.jpg" class="img-fluid "> -->
-            <i class="fa fa-podcast" aria-hidden="true" style="color:whitesmoke; margin-left:1px"></i>
-            GIRISH
+            
         </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapse">
             <span class="navbar-toggler-icon"></span>
