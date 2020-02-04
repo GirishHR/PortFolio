@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+}
+
+.homebody {
+	position: relative;
+	top: 90px;
+}
+
+.download {
+	font-family: serif;
+	font-style: oblique;
+	background: #002f50;
+	font-variant: small-caps;
+	margin-right: 195px;
+	font-size: 23px;
+	font-weight: 50;
+	border-radius: 100px;
+	color: whitesmoke;
+	text-decoration: none;
+	font-size: 1.45em;
+	box-shadow: 4px 6px #888888;
+}
+
+.download:hover {
+	background: #2ba2f7;
+}
+h1,
+h2,
+h5 {
+	font-weight: 700;
+	font-family: serif;
+	font-style: oblique;
+	font-variant: small-caps;
+}
+
+#container {
+	margin: 0;
+	padding: 0;
+	overflow: hidden !important;
+	min-height: 100%;
+}
+.v-header {
+	height: 80vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	margin-left: 320px;
+	overflow: hidden;
+}
+
+.fullscreen-video-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+.fullscreen-video-wrap video {
+	min-width: 100%;
+	min-height: 100%;
+	position: static;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: fill;
+}
+
+.header-overlay {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	z-index: 1;
+	background: #08344d;
+	background-image: linear-gradient(to right, #08344d, #092a3d);
+	opacity: 0.70;
+}
+
+.header-content {
+	z-index: 2;
+}
+
+.header-content h1 {
+	font-size: 50px;
+	margin-bottom: 0;
+}
+
+.header-content p {
+	font-size: 1.5rem;
+	display: block;
+	padding-bottom: 2rem;
+}
+
+.container {
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+}
+.container::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
+}
+@keyframes jump {
+	0% {
+		transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+	}
+	40% {
+		transform: translate3d(30%, 0, 0) scale3d(.7, 1.5, 1);
+	}
+	100% {
+		transform: translate3d(100%, 0, 0) scale3d(1.5, .7, 1);
+	}
+}
+.jump {
+	transform-origin: 50% 50%;
+	animation: jump .5s linear alternate infinite;
+}
+
+@media (max-width: 480px) {
+	h1 {
+		font-size: xx-large !important;
+	}
+	h5 {
+		font-size: x-large;
+	}
+	.homebody {
+		top: 10%;
+	}
+	.download {
+		margin-right: 0;
+		font-size: 20px;
+	}
+}
