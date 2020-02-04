@@ -23,31 +23,33 @@
     style="background-color: #08344d;"
     [ngStyle]="router.url === '/home'? {'background-color': 'transparent'{'background-color':'#08344d'}"
 </nav> -->
-<nav class="navbar navbar-expand-sm  navbar-dark sticky-top " style="opacity: 0.8;"
+<nav class="navbar navbar-expand-sm navbar-wrapper navbar-dark sticky-top " style="opacity: 0.8;"
     [ngStyle]="router.url === '/home' || router.url === '/contact' ? {'background-color': 'transparent'}:{'background-color':'black'}"
     id="main-nav">
     <div class="container">
         <a routerLink="/home" class="navbar-brand">
-            <div class="offset-7 col-xs-2 col-sm-2 col-md-2 col-lg-2"><i class="fa fa-podcast" aria-hidden="true" style="color:whitesmoke;"></i>
-            GIRISH</div>
+            <div class="offset-7 col-xs-2 col-sm-2 col-md-2 col-lg-2"><i class="fa fa-podcast" aria-hidden="true"
+                    style="color:whitesmoke;"></i>
+                GIRISH</div>
             <!-- <img src="../../assets/images/logo.jpg" class="img-fluid "> -->
-            
+
         </a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapse">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=" navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarcollapse">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item ">
+                <li class="nav-item " data-toggle="collapse" data-target=".navbar-collapse.show">
                     <a routerLinkActive="active" routerLink="/home" class="nav-link">HOME</a>
                 </li>
-                <li class="nav-item">
-                    <a routerLinkActive="active" routerLink="/portfolio" class="nav-link">PROFILE</a>
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a routerLinkActive=" active" routerLink="/portfolio" class="nav-link">PROFILE</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                     <a routerLinkActive="active" routerLink="/projects" class="nav-link">PROJECTS</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                     <a routerLinkActive="active" routerLink="/contact" class="nav-link">CONTACT</a>
                 </li>
             </ul>
