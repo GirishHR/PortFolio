@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ChangeDetectorRef, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements AfterViewChecked, OnInit
+{
+  isLoading: boolean = true;
+  constructor(private changeDetector: ChangeDetectorRef) { }
 
-  constructor() { }
+  ngOnInit()
+  {
+  }
+  ngAfterViewChecked(): void
+  {
+    this.changeDetector.detectChanges();
+  }
 
-  ngOnInit() {
+
+  ngAfterViewInit(): void
+  {
+
+    this.isLoading = false;
+
   }
 
 }

@@ -1,4 +1,9 @@
-<div id="container">
+<div class="row">
+    <div [hidden]="bechart" class="spinner-grow" style="width: 10rem; height: 10rem;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<div [hidden]="!bechart" id="container">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
             <div class="section">
@@ -16,7 +21,7 @@
                         <div style="box-shadow: 0 2em 2em 2em rgba(0, 0, 0, .25);margin-bottom: 6%;"
                             class="offset-lg-2 offset-md-2 offset-sm-2 col-md-8 col-lg-8 col-sm-8 col-xs-8">
                             <h3 class="charts" style="margin-bottom: 5%;">B.E - C S E (2016-19)</h3>
-                            <canvas id="becanvas"></canvas>
+                            <canvas id="becanvas">{{bechart}}</canvas>
 
                         </div>
                         <div style="box-shadow: 0 2em 2em 2em rgba(0, 0, 0, .25);margin-bottom: 6%;"
@@ -63,7 +68,7 @@
                         <div class="card-content">
                             <h2>Fifth Third Bank<small>Cincinnati, USA ( 2019-Present )</small></h2>
                             <div class="icon-block text-center"><a href="" class="btn btn-dark download"
-                                    data-toggle="modal" data-target="#modalLoginAvatar">Read
+                                    data-toggle="modal" data-target="#myModal">Read
                                     More
                                 </a>
                             </div>
@@ -81,9 +86,9 @@
                         <div class="card-content">
                             <h2>Adarshana Technology Solutions Private Limited<small>Bangalore( Dec 2018- Apr 2019
                                     )</small></h2>
-                            <div class="icon-block"><a href="#"><button type="button" class="btn btn-dark download"
-                                        style="color:black;">Read
-                                        More</button>
+                            <div class="icon-block"><a href="" class="btn btn-dark download" data-toggle="modal"
+                                    data-target="#myModal">Read
+                                    More
                                 </a>
                             </div>
                         </div>
@@ -101,8 +106,9 @@
                         <h2 class="card-content">
                             <h2>Adarshana Technology Solutions Private Limited<small>Bangalore( May 2018- Jul 2018
                                     )</small></h2>
-                            <div class="icon-block"><a href="#"><button type="button" class="btn btn-dark download">Read
-                                        More</button>
+                            <div class="icon-block"><a href="" class="btn btn-dark download" data-toggle="modal"
+                                    data-target="#myModal">Read
+                                    More
                                 </a>
                             </div>
                         </h2>
@@ -115,37 +121,75 @@
         </div>
     </div>
 </div>
-<!--Modal: Login with Avatar Form-->
-<div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
-        <!--Content-->
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
-
-            <!--Header-->
             <div class="modal-header">
-                <!-- <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar"
-                    class="rounded-circle img-responsive"> -->
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h4 class="modal-title">Modal title</h4>
+                <button type="button" class="close" aria-label="Close" data-dismiss="modal">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <!--Body-->
-            <div class="modal-body text-center mb-1">
-
-                <h5 class="mt-1 mb-2">Maria Doe</h5>
-
-                <div class="md-form ml-0 mr-0">
-                    <input type="password" type="text" id="form29" class="form-control form-control-sm validate ml-0">
-                    <label data-error="wrong" data-success="right" for="form29" class="ml-0">Enter password</label>
-                </div>
-                <div class="text-center mt-4">
-                    <button class="btn btn-cyan mt-1">Login <i class="fas fa-sign-in ml-1"></i></button>
-                </div>
+            <div class="modal-body">
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                    laoreet
+                    rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur
+                    et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                    laoreet
+                    rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur
+                    et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                    laoreet
+                    rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur
+                    et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                    laoreet
+                    rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur
+                    et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                    laoreet
+                    rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur
+                    et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas
+                    eget quam.
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                    laoreet
+                    rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur
+                    et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
             </div>
-
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+            </div>
         </div>
-        <!--/.Content-->
     </div>
 </div>
-<!--Modal: Login with Avatar Form-->

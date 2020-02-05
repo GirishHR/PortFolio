@@ -16,8 +16,16 @@ span {
 	font-variant: small-caps;
 }
 
+.spinner-grow {
+	position: fixed;
+	z-index: 1031;
+	top: 40%;
+	left: 45%;
+}
+
 .img-responsive {
 	border-radius: 65%;
+	box-shadow: 4px 6px #888888;
 }
 
 .hovereffect .overlay {
@@ -160,5 +168,12 @@ span {
 	.hovereffect img {
 		width: 100%;
 		height: 477px;
+	}
+	.img-responsive {
+		box-shadow: 11px 4px #888888;
+	}
+	.spinner-grow {
+		top: 40%;
+		left: 30%;
 	}
 }

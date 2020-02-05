@@ -126,7 +126,7 @@ h4 {
 	left: 50%;
 	max-width: 100px;
 	opacity: 1;
-	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 1px 14px black;
 	border: 2px solid rgba(255, 255, 255, 1);
 	-webkit-transform: translate(-50%, 0%);
 	transform: translate(-50%, 0%);
@@ -178,10 +178,20 @@ h4 {
 .third {
 	margin-top: 25rem;
 }
+.spinner-grow {
+	position: fixed;
+	z-index: 1031;
+	top: 40%;
+	left: 45%;
+}
 @media (max-width: 480px) {
 	.profile-card-1 .profile {
 		height: 6rem;
 		bottom: 46%;
+	}
+	.spinner-grow {
+		top: 40%;
+		left: 30%;
 	}
 	.profile-card-1 h2 small {
 		margin-top: 20px;
