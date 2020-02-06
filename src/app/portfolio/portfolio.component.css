@@ -1,11 +1,17 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
 	font-weight: 700;
 	font-family: serif;
 	font-style: oblique;
 	font-variant: small-caps;
+}
+strong {
+	font-weight: 700;
+	font-family: serif;
+	font-style: oblique;
 }
 
 u {
@@ -151,6 +157,7 @@ h4 {
 .profile-card-1 .icon-block a {
 	text-decoration: none;
 }
+
 .download {
 	font-family: serif;
 	font-style: oblique;
@@ -184,6 +191,21 @@ h4 {
 	top: 40%;
 	left: 45%;
 }
+ul {
+	list-style: none;
+	list-style-position: inside;
+	text-align: justify;
+	text-justify: inter-word;
+	font-weight: 700;
+	font-style: oblique;
+}
+
+ul li:before {
+	content: '✓ \00a0';
+	font-weight: 900;
+	font-size: x-large;
+}
+
 @media (max-width: 480px) {
 	.profile-card-1 .profile {
 		height: 6rem;
@@ -212,5 +234,8 @@ h4 {
 	.second,
 	.third {
 		margin-top: 17rem;
+	}
+	strong {
+		font-family: unset;
 	}
 }
