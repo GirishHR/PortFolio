@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit, ChangeDetectorRef, AfterViewChecked } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects',
@@ -8,8 +9,10 @@ import { Component, OnInit, AfterViewInit, ChangeDetectorRef, AfterViewChecked }
 export class ProjectsComponent implements AfterViewChecked, OnInit
 {
   isLoading: boolean = true;
-  constructor(private changeDetector: ChangeDetectorRef)
+  constructor(private changeDetector: ChangeDetectorRef, private titleService: Title, private meta: Meta)
   {
+    this.titleService.setTitle('Projects');
+    this.meta.addTag({ name: 'description', content: 'The projects that I completed, apart from the company and are publicly available.' });
   }
   ngOnInit()
   {

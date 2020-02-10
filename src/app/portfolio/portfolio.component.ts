@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ChangeDetectorRef, AfterViewChecked } from '@angular/core';
 import { Chart } from 'chart.js';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,7 +13,11 @@ export class PortfolioComponent implements AfterViewChecked, OnInit
   pucchart: any;
   bechart: any;
   isLoading: boolean = true;
-  constructor(private changeDetector: ChangeDetectorRef) { }
+  constructor(private changeDetector: ChangeDetectorRef, private titleService: Title, private meta: Meta)
+  {
+    this.titleService.setTitle('Portfolio');
+    this.meta.addTag({ name: 'description', content: 'My Academic Grades, work experience and the skills that I possess are mentioned.' });
+  }
 
   ngOnInit()
   {

@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit, ChangeDetectorRef, AfterViewChecked } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +9,11 @@ import { Component, OnInit, AfterViewInit, ChangeDetectorRef, AfterViewChecked }
 export class ContactComponent implements AfterViewChecked, OnInit
 {
   isLoading: boolean = true;
-  constructor(private changeDetector: ChangeDetectorRef) { }
+  constructor(private changeDetector: ChangeDetectorRef, private titleService: Title, private meta: Meta)
+  {
+    this.titleService.setTitle('Contacts');
+    this.meta.addTag({ name: 'description', content: 'You can contact me with these media\'s that I\'m available.' });
+  }
 
   ngOnInit()
   {

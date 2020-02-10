@@ -16,7 +16,7 @@ export class HomeComponent implements AfterViewChecked, OnInit
   constructor(private changeDetector: ChangeDetectorRef, private titleService: Title, private meta: Meta)
   {
     this.titleService.setTitle('Profile');
-    this.meta.addTag({ name: 'description', content: 'Hey I\'m Girish you can checkout my work in my website. ' });
+    this.meta.addTag({ name: 'description', content: 'Hey! I\'m a Software Engineer, you can checkout my work in my website.' });
   }
 
   ngOnInit()
