@@ -12,7 +12,7 @@ export class ProjectsComponent implements AfterViewChecked, OnInit
   constructor(private changeDetector: ChangeDetectorRef, private titleService: Title, private meta: Meta)
   {
     this.titleService.setTitle('Projects');
-    this.meta.addTag({ name: 'description', content: 'The projects that I completed, apart from the company and are publicly available.' });
+    // this.meta.addTag({ name: 'description', content: 'The projects that I completed, apart from the company and are publicly available.' });
   }
   ngOnInit()
   {

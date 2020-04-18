@@ -12,7 +12,7 @@ export class ContactComponent implements AfterViewChecked, OnInit
   constructor(private changeDetector: ChangeDetectorRef, private titleService: Title, private meta: Meta)
   {
     this.titleService.setTitle('Contacts');
-    this.meta.addTag({ name: 'description', content: 'You can contact me with these media\'s that I\'m available.' });
+    // this.meta.addTag({ name: 'description', content: 'You can contact me with these media\'s that I\'m available.' });
   }
 
   ngOnInit()

@@ -16,7 +16,7 @@ export class PortfolioComponent implements AfterViewChecked, OnInit
   constructor(private changeDetector: ChangeDetectorRef, private titleService: Title, private meta: Meta)
   {
     this.titleService.setTitle('Portfolio');
-    this.meta.addTag({ name: 'description', content: 'My Academic Grades, work experience and the skills that I possess are mentioned.' });
+    // this.meta.addTag({ name: 'description', content: 'My Academic Grades, work experience and the skills that I possess are mentioned.' });
   }
 
   ngOnInit()
