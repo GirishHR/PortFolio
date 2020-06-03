@@ -1,4 +1,4 @@
-<div id="container">
+<div [hidden]="!bechart" id="container">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
             <div class="section">
@@ -11,12 +11,13 @@
         <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="section">
                 <div>
-                    <h2 style="margin-bottom:5%;"><u>Educational Qualification:</u></h2>
+                    <h2 style="margin-bottom:5%;white-space: nowrap;font-size: 1.8rem;"><u>Educational
+                            Qualification:</u></h2>
                     <div style="text-align: center;">
                         <div style="box-shadow: 0 2em 2em 2em rgba(0, 0, 0, .25);margin-bottom: 6%;"
                             class="offset-lg-2 offset-md-2 offset-sm-2 col-md-8 col-lg-8 col-sm-8 col-xs-8">
                             <h3 class="charts" style="margin-bottom: 5%;">B.E - C S E (2016-19)</h3>
-                            <canvas id="becanvas"></canvas>
+                            <canvas id="becanvas">{{bechart}}</canvas>
 
                         </div>
                         <div style="box-shadow: 0 2em 2em 2em rgba(0, 0, 0, .25);margin-bottom: 6%;"
@@ -50,7 +51,52 @@
 
             </div>
         </div>
-        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 section3 ">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 section3">
+            <div class="section">
+                <h2><u>Publications:</u></h2>
+                <div class="offset-lg-2 offset-md-2 offset-sm-2 col-md-8 col-lg-8 col-sm-8 col-xs-8 articlemedium">
+                    <div class="card publication-card"
+                        style="box-shadow: 0 1em 1em 1em rgba(0, 0, 0, .25);margin-bottom: 6%;">
+                        <!-- <img src="assets/images/workexperiencebackground.jpg" alt="profile-sample1"
+                            class="background" /> -->
+                        <a href="https://medium.com/@girishr.tiptur/fortron-fa91e41c9912"><img
+                                src="assets/images/medium_logo.jpg" alt="profile-image" class="profile" /></a>
+                        <div class="card-content">
+                            <h2>Medium Article<small>Wrote Story on an Android App called "Fortron" in Medium.</small>
+                            </h2>
+                            <div class="icon-block text-center"><a
+                                    href="https://medium.com/@girishr.tiptur/fortron-fa91e41c9912"
+                                    class="btn btn-dark articledownload">Read
+                                    Story
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offset-lg-2 offset-md-2 offset-sm-2 col-md-8 col-lg-8 col-sm-8 col-xs-8 articlemedium">
+                    <div class="card publication-card"
+                        style="box-shadow: 0 1em 1em 1em rgba(0, 0, 0, .25);margin-bottom: 6%;">
+                        <!-- <img src="assets/images/workexperiencebackground.jpg" alt="profile-sample1"
+                                            class="background" /> -->
+                        <a href="https://play.google.com/store/apps/details?id=com.something.googleapp"><img
+                                src="assets/images/Fortron_logo.jpg" alt="profile-image" class="profile" /></a>
+                        <div class="card-content">
+                            <h2>Android Application<small>Published an android app called "Fortron" in Google
+                                    play.</small>
+                            </h2>
+                            <div class="icon-block text-center"><a
+                                    href="https://play.google.com/store/apps/details?id=com.something.googleapp"
+                                    class="btn btn-dark articledownload">Get App
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 section4 mt-4">
             <div class="section">
                 <h2><u>Work Experience:</u></h2>
                 <div class="offset-lg-2 offset-md-2 offset-sm-2 col-md-8 col-lg-8 col-sm-8 col-xs-8 first">
@@ -63,7 +109,7 @@
                         <div class="card-content">
                             <h2>Fifth Third Bank<small>Cincinnati, USA ( 2019-Present )</small></h2>
                             <div class="icon-block text-center"><a href="" class="btn btn-dark download"
-                                    data-toggle="modal" data-target="#modalLoginAvatar">Read
+                                    data-toggle="modal" data-target="#ftbmodal">Read
                                     More
                                 </a>
                             </div>
@@ -81,9 +127,9 @@
                         <div class="card-content">
                             <h2>Adarshana Technology Solutions Private Limited<small>Bangalore( Dec 2018- Apr 2019
                                     )</small></h2>
-                            <div class="icon-block"><a href="#"><button type="button" class="btn btn-dark download"
-                                        style="color:black;">Read
-                                        More</button>
+                            <div class="icon-block"><a href="" class="btn btn-dark download" data-toggle="modal"
+                                    data-target="#adarshanaprojectmodal">Read
+                                    More
                                 </a>
                             </div>
                         </div>
@@ -101,8 +147,9 @@
                         <h2 class="card-content">
                             <h2>Adarshana Technology Solutions Private Limited<small>Bangalore( May 2018- Jul 2018
                                     )</small></h2>
-                            <div class="icon-block"><a href="#"><button type="button" class="btn btn-dark download">Read
-                                        More</button>
+                            <div class="icon-block"><a href="" class="btn btn-dark download" data-toggle="modal"
+                                    data-target="#adarshanainternshipmodal">Read
+                                    More
                                 </a>
                             </div>
                         </h2>
@@ -115,37 +162,100 @@
         </div>
     </div>
 </div>
-<!--Modal: Login with Avatar Form-->
-<div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
-        <!--Content-->
-        <div class="modal-content">
 
-            <!--Header-->
+<!-- Modal -->
+<div class="modal fade" id="ftbmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
             <div class="modal-header">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar"
-                    class="rounded-circle img-responsive">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                <h5 class="modal-title" id="exampleModalLongTitle" style="text-transform: uppercase;">Tata Consultancy
+                    Services.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-times-circle" aria-hidden="true" style="font-size: 25px;"></i>
                 </button>
             </div>
-            <!--Body-->
-            <div class="modal-body text-center mb-1">
-
-                <h5 class="mt-1 mb-2">Maria Doe</h5>
-
-                <div class="md-form ml-0 mr-0">
-                    <input type="password" type="text" id="form29" class="form-control form-control-sm validate ml-0">
-                    <label data-error="wrong" data-success="right" for="form29" class="ml-0">Enter password</label>
-                </div>
-                <div class="text-center mt-4">
-                    <button class="btn btn-cyan mt-1">Login <i class="fas fa-sign-in ml-1"></i></button>
-                </div>
+            <div class="modal-body">
+                <strong> Worked as a "Frontend Developer" for "Fifth Third Bank" client at "TCS".</strong>
+                <ul>
+                    <li>Worked on customer's Big data and Data Visualization of the respective.
+                    </li>
+                    <li>Worked on Bank Dashboard to provide Visualization of live data
+                        with effective user interface to Clients. </li>
+                    <li>Communicated and Worked directly with the client's to ensure that the designs were efficient
+                        and
+                        technically good. </li>
+                    <li>Worked with the backend developers to optimize the UI for better user experience.</li>
+                </ul>
             </div>
-
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary download" data-dismiss="modal"
+                    style="color:black;">Close</button>
+            </div>
         </div>
-        <!--/.Content-->
     </div>
 </div>
-<!--Modal: Login with Avatar Form-->
+
+<!-- Modal -->
+<div class="modal fade" id="adarshanaprojectmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle" style="text-transform: uppercase;">Adarshana
+                    Technology Solutions Private Limited.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-times-circle" aria-hidden="true" style="font-size: 25px;"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <strong> Worked as Data Scientist in an Internship to develop a Data Science Project with the Company.
+                </strong>
+                <ul>
+                    <li>Worked on Azure cloud technology to retrieve the customer's real data.
+                    </li>
+                    <li>Worked on Visualizing customer's device usage real data and to provide the respective data
+                        directly to the customer. </li>
+                    <li>Used most of the data science methodologies on real data to interpret it as a meaningful data
+                        and also to point out the abnormalities of the device usage.</li>
+                    <li>Developed automated scripts that ensures to work on getting the usage using Python.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary download" data-dismiss="modal"
+                    style="color:black;">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="adarshanainternshipmodal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle" style="text-transform: uppercase;">Adarshana
+                    Technology Solutions Private Limited.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-times-circle" aria-hidden="true" style="font-size: 25px;"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <strong> Worked as a Data Scientist to develop the Home Automation Device.</strong>
+                <ul>
+                    <li>Worked on IOT device to establish remote communication between devices.
+                    </li>
+                    <li>Worked on the device to repeatedly feed the live data to the cloud with the time interval.</li>
+                    <li>Worked on cloud connectivity and authentication measures. </li>
+                    <li>Directly dealing with the higher authority team to provide device usage measures.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary download" data-dismiss="modal"
+                    style="color:black;">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
