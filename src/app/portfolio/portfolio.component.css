@@ -117,7 +117,7 @@ h4 {
 .publication-card .profile {
 	border-radius: 50%;
 	position: absolute;
-	bottom: 8%;
+	top: 6%;
 	left: 11%;
 	max-width: 100px;
 	opacity: 1;
@@ -159,7 +159,7 @@ h4 {
 
 .publication-card .icon-block {
 	width: auto;
-	margin-top: 5px;
+	margin-top: -2px;
 	text-align: center;
 }
 .publication-card .icon-block a {
@@ -251,10 +251,69 @@ h4 {
 	margin-top: 25rem;
 }
 
+.certification {
+	min-height: 200px;
+}
+
+@media (max-width: 1199px) {
+	.publication-card .card-content h2 small {
+		width: 100%;
+		padding: 0 70px 0 40px;
+		left: 50%;
+	}
+	.publication-card {
+		min-height: 180px;
+	}
+	.certification {
+		min-height: 195px !important;
+	}
+}
+
+@media (max-width: 777px) {
+	.publication-card .card-content h2 small {
+		width: 100%;
+		padding: 0 15px 0 25px;
+		left: 50%;
+	}
+	.publication-card {
+		min-height: 150px;
+	}
+	.publication-card .card-content h2 {
+		width: 80%;
+	}
+
+	.publication-card .profile {
+		bottom: 20%;
+		left: 18%;
+	}
+	.articledownload {
+		margin-left: -15%;
+	}
+}
+
+@media (max-width: 1199px) {
+	@media (min-width: 481px) {
+		.publication-card {
+			min-height: 195px;
+		}
+		.certification {
+			min-height: 220px !important;
+		}
+	}
+}
+
 @media (max-width: 480px) {
 	.profile-card-1 .profile {
 		height: 6rem;
 		bottom: 46%;
+	}
+
+	.certification {
+		min-height: 195px !important;
+	}
+
+	.publication-card {
+		min-height: 170px;
 	}
 	.profile-card-1 h2 small {
 		margin-top: 20px;
@@ -311,35 +370,11 @@ h4 {
 	}
 }
 
-@media (max-width: 1199px) {
-	.publication-card .card-content h2 small {
-		width: 100%;
-		padding: 0 70px 0 40px;
-		left: 50%;
-	}
+@media (max-width: 349px) {
 	.publication-card {
 		min-height: 180px;
 	}
-}
-
-@media (max-width: 777px) {
-	.publication-card .card-content h2 small {
-		width: 100%;
-		padding: 0 15px 0 25px;
-		left: 50%;
-	}
-	.publication-card {
-		min-height: 150px;
-	}
-	.publication-card .card-content h2 {
-		width: 80%;
-	}
-
-	.publication-card .profile {
-		bottom: 20%;
-		left: 18%;
-	}
-	.articledownload {
-		margin-left: -15%;
+	.certification {
+		min-height: 225px !important;
 	}
 }
