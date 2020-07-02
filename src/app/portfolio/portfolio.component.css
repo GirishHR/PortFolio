@@ -203,6 +203,7 @@ h4 {
 	-webkit-transform: translate(-50%, 0%);
 	transform: translate(-50%, 0%);
 	height: 8rem;
+	background-color: white;
 }
 .profile-card-1 h2 {
 	margin: 0 0 5px;
