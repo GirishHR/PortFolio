@@ -18,7 +18,7 @@
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
 						"tsConfig": "tsconfig.app.json",
-						"aot": false,
+						"aot": true,
 						"assets": [ "src/favicon.ico", "src/robots.txt", "src/sitemap.xml", "src/assets" ],
 						"styles": [ "node_modules/bootstrap/dist/css/bootstrap.min.css", "src/styles.css" ],
 						"scripts": []
@@ -58,18 +58,18 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"options": {
-						"browserTarget": "profile:build"
+						"buildTarget": "profile:build"
 					},
 					"configurations": {
 						"production": {
-							"browserTarget": "profile:build:production"
+							"buildTarget": "profile:build:production"
 						}
 					}
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "profile:build"
+						"buildTarget": "profile:build"
 					}
 				},
 				"test": {
@@ -106,5 +106,8 @@
 			}
 		}
 	},
-	"defaultProject": "profile"
+  "defaultProject": "profile",
+  "cli": {
+    "analytics": "2aacd60a-1730-4ad0-bc73-b90e9bd7ebff"
+  }
 }
